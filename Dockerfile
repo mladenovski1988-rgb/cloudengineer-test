@@ -6,7 +6,7 @@ ARG APP_VERSION=1.0.0
 COPY src/*.csproj ./
 RUN dotnet restore
 
-COPY . ./
+COPY src/ ./
 RUN dotnet publish -c Release -o out /p:Version=$APP_VERSION
 
 # Runtime stage
