@@ -3,7 +3,7 @@ WORKDIR /app
 
 ARG APP_VERSION=1.0.0
 
-COPY *.csproj ./
+COPY src/*.csproj ./
 RUN dotnet restore
 
 COPY . ./
